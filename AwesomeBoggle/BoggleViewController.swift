@@ -4,8 +4,8 @@ class BoggleViewController: UIViewController {
     
     let boggleView: BoggleView
     let boggleModel: BoggleModel
-
-    init(boggleView: BoggleView = BoggleView(), boggleModel: BoggleModel = BoggleModel()){
+    
+    init(boggleView: BoggleView = BoggleView(), boggleModel: BoggleModel = BoggleModel()) {
         self.boggleView = boggleView
         self.boggleModel = boggleModel
         super.init(nibName: nil, bundle: nil)
@@ -28,7 +28,12 @@ class BoggleViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.isHidden = true
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,12 +45,10 @@ extension BoggleViewController: BoggleViewProtocol {
         boggleModel.addLetterToCurrentWord(letter: letter)
     }
     
-    func resetTapped(){
+    func resetTapped() {
         let numberOfButtons = boggleView.buttonCount
         let newButtonTitles = boggleModel.lettersArray(numberOfLetters: numberOfButtons)
         boggleView.setButtonTitles(newButtonTitles)
-        boggleView.reset()
-        boggleModel.reset()
     }
     
     func enterTapped() {
@@ -60,13 +63,24 @@ extension BoggleViewController: BoggleViewProtocol {
 extension BoggleViewController: BoggleModelProtocol {
     func currentWordUpdated(currentWord: String) {
         self.boggleView.setCurrentWord(currentWord)
-        
     }
     
-    func wordListUpdated(wordList: [String]) {
+    func wordListUpdated(wordList: [BoggleWord]) {
         DispatchQueue.main.async {
             self.boggleView.updateWordList(wordList)
         }
     }
-
+    
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "error", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
 }
+

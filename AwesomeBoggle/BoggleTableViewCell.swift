@@ -1,9 +1,9 @@
 
 import UIKit
 
-class BoggleTabeViewCell: UITableViewCell {
+class BoggleTableViewCell: UITableViewCell {
     
-    override init(style:UITableViewCellStyle, reuseIdentifier: String?){
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
     }
     

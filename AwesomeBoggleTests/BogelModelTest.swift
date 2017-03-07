@@ -8,7 +8,7 @@
 @testable import AwesomeBoggle
 import XCTest
 
-class BogelModelTest: XCTestCase {
+class BoggleModelTest: XCTestCase {
     
     class MockBoggleModelDelegate : BoggleModelProtocol {
         
@@ -28,7 +28,6 @@ class BogelModelTest: XCTestCase {
             latestWordList = wordList
         }
     }
-
     
     let testObject = BoggleModel()
     let mockDelegate = MockBoggleModelDelegate()
@@ -37,35 +36,29 @@ class BogelModelTest: XCTestCase {
         super.setUp()
         testObject.delegate = mockDelegate
     }
-
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func test_addLetterToCurrentWord_addsLetter() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_AddLetterToCurrentWord_AddsTheLetter() {
         
         testObject.addLetterToCurrentWord(letter: "h")
         
         XCTAssertEqual("h", testObject.currentWord)
-        
     }
     
-    func test_addLetterToCurrentWord_appendsSecondLetter() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_AddLetterToCurrentWord_AddsTheNextLetterToTheCurrentWord() {
         
         testObject.addLetterToCurrentWord(letter: "h")
         testObject.addLetterToCurrentWord(letter: "i")
         
         XCTAssertEqual("hi", testObject.currentWord)
-        
     }
     
     func test_submitWord_clearsCurrentWord() {
+        
         testObject.addLetterToCurrentWord(letter: "h")
         testObject.addLetterToCurrentWord(letter: "i")
         testObject.submitWord()
@@ -74,8 +67,9 @@ class BogelModelTest: XCTestCase {
     }
     
     func test_lettersArray_returnsCorrectNumberOfLetters() {
+        
         let result1 = testObject.lettersArray(numberOfLetters: 12)
-        XCTAssertEqual(12, result1.count);
+        XCTAssertEqual(result1.count, 12)
         
         let result2 = testObject.lettersArray(numberOfLetters: 1)
         XCTAssertEqual(result2.count, 1)
@@ -92,8 +86,7 @@ class BogelModelTest: XCTestCase {
             XCTAssertTrue(NSCharacterSet.letters.contains(UnicodeScalar(char)!))
         }
     }
-
-    //begin here
+    
     func test_addLetterToCurrentWord_callsCurrentWordUpdatedOnDelegate() {
         testObject.addLetterToCurrentWord(letter: "h")
         
@@ -153,6 +146,10 @@ class BogelModelTest: XCTestCase {
         XCTAssertEqual(mockDelegate.latestWordList, ["hello", "world"])
         
     }
-
-
+    
 }
+
+
+
+
+

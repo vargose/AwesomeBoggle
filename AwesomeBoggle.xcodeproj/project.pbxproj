@@ -24,6 +24,7 @@
 		D5A19EE81E5F2BC400A79587 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A19EE71E5F2BC400A79587 /* ScoreView.swift */; };
 		D5D15BF71E55E99900B21E6F /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D15BF61E55E99900B21E6F /* DictionaryService.swift */; };
 		D5D15BF91E55F45100B21E6F /* BoggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D15BF81E55F45100B21E6F /* BoggleTableViewCell.swift */; };
+		D5D29DCE1E6EFDD600D7B6FD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D29DCD1E6EFDD600D7B6FD /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D5A19EE71E5F2BC400A79587 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		D5D15BF61E55E99900B21E6F /* DictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
 		D5D15BF81E55F45100B21E6F /* BoggleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleTableViewCell.swift; sourceTree = "<group>"; };
+		D5D29DCD1E6EFDD600D7B6FD /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				D58F6CA31E3A3982003E8E13 /* Assets.xcassets */,
 				D58F6CA01E3A3982003E8E13 /* AwesomeBoggle.xcdatamodeld */,
 				D5854B141E4375C30089DF1F /* BoggleModel.swift */,
+				D5D29DCD1E6EFDD600D7B6FD /* CoreDataManager.swift */,
 				D5D15BF81E55F45100B21E6F /* BoggleTableViewCell.swift */,
 				D58F6CCA1E3A3C5C003E8E13 /* BoggleView.swift */,
 				D58F6C9B1E3A3982003E8E13 /* BoggleViewController.swift */,
@@ -295,6 +298,7 @@
 				D5A19EE41E5F2BA300A79587 /* BoggleWord.swift in Sources */,
 				D5A19EE81E5F2BC400A79587 /* ScoreView.swift in Sources */,
 				D5854B151E4375C30089DF1F /* BoggleModel.swift in Sources */,
+				D5D29DCE1E6EFDD600D7B6FD /* CoreDataManager.swift in Sources */,
 				D58F6C9C1E3A3982003E8E13 /* BoggleViewController.swift in Sources */,
 				D5A19EE21E5F268C00A79587 /* WordDetailViewController.swift in Sources */,
 				D58F6CCB1E3A3C5C003E8E13 /* BoggleView.swift in Sources */,

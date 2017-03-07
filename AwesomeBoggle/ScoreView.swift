@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ScoreViewProtocol: class{
+protocol ScoreViewProtocol: class {
     func dismissTapped()
 }
 
@@ -19,7 +19,7 @@ class ScoreView: UIControl {
     init() {
         super.init(frame: CGRect.zero)
         backgroundColor = .blue
-        self.addTarget(self, action: #selector (dismissModal), for: .touchUpInside)
+        self.addTarget(self, action: #selector(dismissModal), for: .touchUpInside)
     }
     
     required init?(coder aDecoder: NSCoder) {

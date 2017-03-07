@@ -16,12 +16,12 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
             return buttonArray.count
         }
     }
-    var wordList: [String]=[]
+    private var wordList: [BoggleWord] = []
     private var wordListTableView = UITableView()
-
+    
     init() {
         super.init(frame: CGRect.zero)
-        self.backgroundColor = .gray
+        backgroundColor = .gray
         
         let resetButton = UIButton()
         resetButton.setTitle("Reset", for: .normal)
@@ -36,7 +36,7 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         let verticalStackView = UIStackView()
         verticalStackView.axis = .vertical
-        self.addSubview(verticalStackView);
+        addSubview(verticalStackView)
         
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         verticalStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -58,13 +58,12 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
                 buttonToAdd.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 1/4).isActive = true
                 buttonToAdd.heightAnchor.constraint(equalTo: buttonToAdd.widthAnchor).isActive = true
                 buttonToAdd.backgroundColor = .white
-                buttonToAdd.setTitleColor(.purple, for: .normal)
+                buttonToAdd.setTitleColor(.black, for: .normal)
                 buttonToAdd.layer.borderColor = UIColor.red.cgColor
                 buttonToAdd.layer.borderWidth = 1
                 buttonToAdd.layer.cornerRadius = 10
                 
                 buttonToAdd.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-                
             }
         }
         
@@ -81,7 +80,7 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.addSubview(enterButton)
         enterButton.setTitle("Enter", for: .normal)
         enterButton.setTitleColor(.black, for: .normal)
-        enterButton.addTarget(self, action: #selector(enterButtonTapped), for: .touchUpInside)
+        enterButton.addTarget(self, action: #selector(enterTapped), for: .touchUpInside)
         
         enterButton.translatesAutoresizingMaskIntoConstraints = false
         enterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -89,8 +88,7 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
         enterButton.leadingAnchor.constraint(equalTo: currentWordLabel.trailingAnchor, constant: 10).isActive = true
         enterButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         
-
-        wordListTableView.register(UITableViewCell.self, forCellReuseIdentifier: "wordcell")
+        wordListTableView.register(BoggleTableViewCell.self, forCellReuseIdentifier: "wordcell")
         wordListTableView.delegate = self
         wordListTableView.dataSource = self
         
@@ -106,7 +104,7 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc
-    func buttonTapped(sender: UIButton){
+    private func buttonTapped(sender: UIButton) {
         let letter = sender.titleLabel?.text
         if let letter = letter {
             self.delegate?.buttonPressedWithLetter(letter)
@@ -117,20 +115,13 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
     private func resetTapped() {
         self.delegate?.resetTapped()
     }
-
     
     @objc
-    func enterButtonTapped(sender: UIButton){
+    private func enterTapped() {
         self.delegate?.enterTapped()
-        
     }
     
-    func reset() {
-        self.wordList.removeAll()
-        self.wordListTableView.reloadData()
-    }
-    
-    func setCurrentWord(_ currentWord: String){
+    func setCurrentWord(_ currentWord: String) {
         currentWordLabel.text = currentWord
     }
     
@@ -142,24 +133,26 @@ class BoggleView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func updateWordList(_ wordList: [String]) {
+    func updateWordList(_ wordList: [BoggleWord]) {
         self.wordList = wordList
         self.wordListTableView.reloadData()
     }
     
+    //UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.wordList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordcell", for: indexPath)
-        cell.textLabel?.text = wordList[indexPath.row]
+        cell.textLabel?.text = wordList[indexPath.row].word
+        cell.detailTextLabel?.text = wordList[indexPath.row].exampleSentence
         return cell
     }
     
-
-    
-    
-
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = wordList[indexPath.row]
+        self.delegate?.wordTapped(word: selectedItem)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
