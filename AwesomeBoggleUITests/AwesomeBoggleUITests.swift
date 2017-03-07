@@ -27,10 +27,35 @@ class AwesomeBoggleUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+    //begin here
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let buttonPredicate = NSPredicate(format:"label.length == 1")
+        let buttons = app.buttons.matching(buttonPredicate)
+        XCTAssertEqual(buttons.count, 16)
+        let firstButton = buttons.element(boundBy: 2)
+        let firstLetter = firstButton.label
+        
+        firstButton.tap()
+        
+        let currentWordField = app.staticTexts.element(boundBy: 0)
+        
+        XCTAssertEqual(currentWordField.label, firstLetter)
+        
+        app.buttons["Enter"].tap()
+        
+        XCTAssertEqual(currentWordField.label, "")
+        XCTAssertEqual(app.tables.staticTexts.element(boundBy: 0).label, firstLetter)
+        
+        app.buttons["Reset"].tap()
+        
+        
     }
+    
+
     
 }
