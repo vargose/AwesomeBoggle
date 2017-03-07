@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50A158C1E4CB836000CC98C /* BogelModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A158B1E4CB836000CC98C /* BogelModelTest.swift */; };
+		D5854B151E4375C30089DF1F /* BoggleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5854B141E4375C30089DF1F /* BoggleModel.swift */; };
 		D58F6C9A1E3A3982003E8E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F6C991E3A3982003E8E13 /* AppDelegate.swift */; };
-		D58F6C9C1E3A3982003E8E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F6C9B1E3A3982003E8E13 /* ViewController.swift */; };
-		D58F6C9F1E3A3982003E8E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58F6C9D1E3A3982003E8E13 /* Main.storyboard */; };
+		D58F6C9C1E3A3982003E8E13 /* BoggleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F6C9B1E3A3982003E8E13 /* BoggleViewController.swift */; };
 		D58F6CA21E3A3982003E8E13 /* AwesomeBoggle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58F6CA01E3A3982003E8E13 /* AwesomeBoggle.xcdatamodeld */; };
 		D58F6CA41E3A3982003E8E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58F6CA31E3A3982003E8E13 /* Assets.xcassets */; };
 		D58F6CA71E3A3982003E8E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58F6CA51E3A3982003E8E13 /* LaunchScreen.storyboard */; };
 		D58F6CB21E3A3982003E8E13 /* AwesomeBoggleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F6CB11E3A3982003E8E13 /* AwesomeBoggleTests.swift */; };
 		D58F6CBD1E3A3982003E8E13 /* AwesomeBoggleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F6CBC1E3A3982003E8E13 /* AwesomeBoggleUITests.swift */; };
+		D58F6CCB1E3A3C5C003E8E13 /* BoggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58F6CCA1E3A3C5C003E8E13 /* BoggleView.swift */; };
+		D5A19EE01E5F267300A79587 /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A19EDF1E5F267300A79587 /* WordDetailView.swift */; };
+		D5A19EE21E5F268C00A79587 /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A19EE11E5F268C00A79587 /* WordDetailViewController.swift */; };
+		D5A19EE41E5F2BA300A79587 /* BoggleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A19EE31E5F2BA300A79587 /* BoggleWord.swift */; };
+		D5A19EE61E5F2BB500A79587 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A19EE51E5F2BB500A79587 /* ScoreViewController.swift */; };
+		D5A19EE81E5F2BC400A79587 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A19EE71E5F2BC400A79587 /* ScoreView.swift */; };
+		D5D15BF71E55E99900B21E6F /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D15BF61E55E99900B21E6F /* DictionaryService.swift */; };
+		D5D15BF91E55F45100B21E6F /* BoggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D15BF81E55F45100B21E6F /* BoggleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D50A158B1E4CB836000CC98C /* BogelModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BogelModelTest.swift; sourceTree = "<group>"; };
+		D5854B141E4375C30089DF1F /* BoggleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleModel.swift; sourceTree = "<group>"; };
 		D58F6C961E3A3982003E8E13 /* AwesomeBoggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeBoggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58F6C991E3A3982003E8E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D58F6C9B1E3A3982003E8E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D58F6C9E1E3A3982003E8E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D58F6C9B1E3A3982003E8E13 /* BoggleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoggleViewController.swift; sourceTree = "<group>"; };
 		D58F6CA11E3A3982003E8E13 /* AwesomeBoggle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AwesomeBoggle.xcdatamodel; sourceTree = "<group>"; };
 		D58F6CA31E3A3982003E8E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D58F6CA61E3A3982003E8E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,14 @@
 		D58F6CB81E3A3982003E8E13 /* AwesomeBoggleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeBoggleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58F6CBC1E3A3982003E8E13 /* AwesomeBoggleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeBoggleUITests.swift; sourceTree = "<group>"; };
 		D58F6CBE1E3A3982003E8E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58F6CCA1E3A3C5C003E8E13 /* BoggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleView.swift; sourceTree = "<group>"; };
+		D5A19EDF1E5F267300A79587 /* WordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
+		D5A19EE11E5F268C00A79587 /* WordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		D5A19EE31E5F2BA300A79587 /* BoggleWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleWord.swift; sourceTree = "<group>"; };
+		D5A19EE51E5F2BB500A79587 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		D5A19EE71E5F2BC400A79587 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		D5D15BF61E55E99900B21E6F /* DictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
+		D5D15BF81E55F45100B21E6F /* BoggleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +118,20 @@
 			isa = PBXGroup;
 			children = (
 				D58F6C991E3A3982003E8E13 /* AppDelegate.swift */,
-				D58F6C9B1E3A3982003E8E13 /* ViewController.swift */,
-				D58F6C9D1E3A3982003E8E13 /* Main.storyboard */,
 				D58F6CA31E3A3982003E8E13 /* Assets.xcassets */,
-				D58F6CA51E3A3982003E8E13 /* LaunchScreen.storyboard */,
-				D58F6CA81E3A3982003E8E13 /* Info.plist */,
 				D58F6CA01E3A3982003E8E13 /* AwesomeBoggle.xcdatamodeld */,
+				D5854B141E4375C30089DF1F /* BoggleModel.swift */,
+				D5D15BF81E55F45100B21E6F /* BoggleTableViewCell.swift */,
+				D58F6CCA1E3A3C5C003E8E13 /* BoggleView.swift */,
+				D58F6C9B1E3A3982003E8E13 /* BoggleViewController.swift */,
+				D5A19EE31E5F2BA300A79587 /* BoggleWord.swift */,
+				D5D15BF61E55E99900B21E6F /* DictionaryService.swift */,
+				D58F6CA81E3A3982003E8E13 /* Info.plist */,
+				D58F6CA51E3A3982003E8E13 /* LaunchScreen.storyboard */,
+				D5A19EE71E5F2BC400A79587 /* ScoreView.swift */,
+				D5A19EE51E5F2BB500A79587 /* ScoreViewController.swift */,
+				D5A19EDF1E5F267300A79587 /* WordDetailView.swift */,
+				D5A19EE11E5F268C00A79587 /* WordDetailViewController.swift */,
 			);
 			path = AwesomeBoggle;
 			sourceTree = "<group>";
@@ -115,6 +141,7 @@
 			children = (
 				D58F6CB11E3A3982003E8E13 /* AwesomeBoggleTests.swift */,
 				D58F6CB31E3A3982003E8E13 /* Info.plist */,
+				D50A158B1E4CB836000CC98C /* BogelModelTest.swift */,
 			);
 			path = AwesomeBoggleTests;
 			sourceTree = "<group>";
@@ -237,7 +264,6 @@
 			files = (
 				D58F6CA71E3A3982003E8E13 /* LaunchScreen.storyboard in Resources */,
 				D58F6CA41E3A3982003E8E13 /* Assets.xcassets in Resources */,
-				D58F6C9F1E3A3982003E8E13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D15BF91E55F45100B21E6F /* BoggleTableViewCell.swift in Sources */,
+				D5A19EE61E5F2BB500A79587 /* ScoreViewController.swift in Sources */,
+				D5A19EE01E5F267300A79587 /* WordDetailView.swift in Sources */,
 				D58F6CA21E3A3982003E8E13 /* AwesomeBoggle.xcdatamodeld in Sources */,
-				D58F6C9C1E3A3982003E8E13 /* ViewController.swift in Sources */,
+				D5A19EE41E5F2BA300A79587 /* BoggleWord.swift in Sources */,
+				D5A19EE81E5F2BC400A79587 /* ScoreView.swift in Sources */,
+				D5854B151E4375C30089DF1F /* BoggleModel.swift in Sources */,
+				D58F6C9C1E3A3982003E8E13 /* BoggleViewController.swift in Sources */,
+				D5A19EE21E5F268C00A79587 /* WordDetailViewController.swift in Sources */,
+				D58F6CCB1E3A3C5C003E8E13 /* BoggleView.swift in Sources */,
 				D58F6C9A1E3A3982003E8E13 /* AppDelegate.swift in Sources */,
+				D5D15BF71E55E99900B21E6F /* DictionaryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58F6CB21E3A3982003E8E13 /* AwesomeBoggleTests.swift in Sources */,
+				D50A158C1E4CB836000CC98C /* BogelModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +336,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D58F6C9D1E3A3982003E8E13 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D58F6C9E1E3A3982003E8E13 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D58F6CA51E3A3982003E8E13 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -509,6 +537,7 @@
 				D58F6CC31E3A3982003E8E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D58F6CC41E3A3982003E8E13 /* Build configuration list for PBXNativeTarget "AwesomeBoggleTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +546,7 @@
 				D58F6CC61E3A3982003E8E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D58F6CC71E3A3982003E8E13 /* Build configuration list for PBXNativeTarget "AwesomeBoggleUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +555,7 @@
 				D58F6CC91E3A3982003E8E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
